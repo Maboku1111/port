@@ -5,16 +5,17 @@ const Header = () => {
   return (
     <header>
       <div className="logo">
-        Ezrah <AuroraText>Codes</AuroraText>
+        <p>Ezrah <AuroraText>CODES</AuroraText></p>
       </div>
 
       <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
         <a href="#">Projects</a>
         <a href="#">Blog</a>
-        <a href="#">Contact Me</a>
       </nav>
+
+      <div className="right-side-nav">
+        <p>ezrahcodes</p>
+      </div>
     </header>
   );
 };

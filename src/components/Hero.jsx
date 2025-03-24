@@ -1,5 +1,7 @@
 import { MorphingText } from "./magicui/morphing-text";
 import { TypingAnimation } from "./magicui/typing-animation";
+import { SpinningText } from "@/components/magicui/spinning-text";
+import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 
 const texts = [
   "Innovation Engineer",
@@ -13,12 +15,16 @@ const texts = [
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="hero-text">
-        <h1>
-          Hi, I’m <TypingAnimation className="name">Maboku Seimela</TypingAnimation>
-        </h1>
+      <div className="hero-image">
+        <SpinningText>repeat • eat • sleep • code •</SpinningText>
+      </div>
 
-        <div>
+      <div className="hero-text">
+        <h4>
+          Hi, I’m <TypingAnimation className="name">Maboku Seimela</TypingAnimation>
+        </h4>
+
+        <div >
           <MorphingText className="text" texts={texts} />
         </div>
 
@@ -39,9 +45,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hero-image">
-        <img src="/your-image.jpg" alt="Maboku Seimela" />
-      </div>
+      
     </section>
   );
 };

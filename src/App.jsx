@@ -1,13 +1,11 @@
 /* App.jsx */
 import "./App.css";
-import Header from "./components/Header.jsx";
-import Hero from "./components/Hero.jsx";
+import Layout from "./layout/Layout";
 
 function App() {
   return (
     <div className="container">
-      <Header />
-      <Hero />
+      <Layout />
     </div>
   );
 }

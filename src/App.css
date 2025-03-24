@@ -5,7 +5,7 @@
 /* styles.css */
 .container {
   width: 90%; /* Ensures it adapts to different screen sizes */
-  max-width: 1200px; /* Prevents it from getting too wide on large screens */
+  max-width: 1800px; /* Prevents it from getting too wide on large screens */
   margin: 0 auto; /* Centers it horizontally */
   padding: 20px; /* Adds some inner spacing */
   box-sizing: border-box; /* Ensures padding doesn't affect total width */
@@ -29,11 +29,12 @@ body {
 /* Header */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 16px 32px;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* background-color: white; */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  border-radius: 30px;
 }
 
 .dark-mode header {
@@ -42,7 +43,8 @@ header {
 
 nav {
   display: flex;
-  gap: 16px;
+  gap: 32px;
+  position: sticky;
 }
 
 nav a {
@@ -63,7 +65,7 @@ nav a:hover {
   justify-content: center;
   padding: 64px 16px;
   text-align: center;
-  gap: 24rem;
+  gap: 16rem;
   margin-top: 80px;
 }
 
