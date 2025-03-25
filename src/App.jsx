@@ -4,7 +4,7 @@ import Layout from "./layout/Layout";
 
 function App() {
   return (
-    <div className="container">
+    <div className="main-container">
       <Layout />
     </div>
   );

@@ -29,21 +29,41 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "post",
+        name: "blog",
         label: "Blog Posts",
-        path: "content/posts",
+        path: "content/blog",
+        format: "mdx", // You can use "md" for markdown or "mdx" for markdown with React components
+        ui: {
+          router: ({ document }) => `/blog/${document._sys.filename}`, // Maps blog posts to URLs
+        },
         fields: [
           {
             type: "string",
             name: "title",
             label: "Title",
-            // isTitle: true,
-            // required: true,
+            required: true,
           },
           {
             type: "string",
+            name: "author",
+            label: "Author",
+            required: true,
+          },
+          {
+            type: "datetime",
+            name: "date",
+            label: "Publish Date",
+            required: true,
+          },
+          {
+            type: "image",
+            name: "thumbnail",
+            label: "Thumbnail Image",
+          },
+          {
+            type: "rich-text",
             name: "body",
-            label: "Post Body",
+            label: "Content",
             isBody: true,
           },
         ],
