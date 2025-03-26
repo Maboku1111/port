@@ -1,32 +1,19 @@
 import { TypingAnimation } from "./magicui/typing-animation";
 import { WordRotate } from "./magicui/word-rotate";
-import { HyperText } from "./magicui/hyper-text";
-
-const texts = [
-  "Innovation Engineer",
-  "Full Stack Developer",
-  "UI/UX Enthusiast",
-  "Aspiring Philantropist",
-  "GOAT Programmer",
-];
 
 /* Hero.jsx */
 const Hero = () => {
   return (
     <section className="hero">
-      {/* <div className="hero-image">
-        <SpinningText>repeat • eat • sleep • code •</SpinningText>
-      </div> */}
-
       <div className="hero-text">
         <div className="paragraph"><TypingAnimation delay="20" duration="200" className="name">Maboku Seimela</TypingAnimation></div>
 
         <div className="word-rotate">
           <span>ENGINEERING</span>
-          <WordRotate className="word-smith" duration="2500" words={["TOMORROW", "TODAY", "FOREVER"]}/>
+          <WordRotate className="word-smith" duration="2000" words={["TOMORROW", "TODAY", "FOREVER"]}/>
         </div>
 
-        <p className="bio">Innovation isn't just about invention—it's about <span className="inner-text">creating solutions that matter</span>. With a balance of <span className="inner-text">strategy, creativity, and technical expertise</span>, Maboku ensures that each innovation is <span className="inner-text">functional, scalable, and built to last</span>.</p>
+        <p className="bio">Innovation isn’t just about invention—it’s about <span className="inner-text">creating solutions that truly matter</span>. With a blend of <span className="inner-text">strategy, creativity, and technical expertise</span>, I ensure that every innovation is <span className="inner-text">functional, scalable, and built to last</span>.</p>
 
         {/* <div className="buttons">
           <a href="/resume.pdf" className="button primary">

@@ -20,7 +20,11 @@ const Blog = () => {
             <ul >
                 {blogPost.map((post) => (
                     <li key={post.slug}>
-                        <strong>{post.slug}</strong>
+                        <h2>{post.title}</h2>  
+                        <p><strong>By:</strong> {post.author}</p>
+                        {post.map(post => <p>{post.body}</p>)}  
+                        <p>{post.body}</p>  
+                        <hr />
                     </li>
                 ))}
             </ul>
@@ -38,7 +42,10 @@ async function getBlogPosts() {
     }
 
     return blogPostsResponse.data.blogConnection.edges.map((blogPost) => ({
-        slug: blogPost.node._sys.filename
+        slug: blogPost.node._sys.filename,
+        title: blogPost.node.title,  // Extract title
+        author: blogPost.node.author, // Extract author
+        body: blogPost.node.body,  // Extract body content
     }));
 }
 
