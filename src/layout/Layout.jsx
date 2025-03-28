@@ -13,7 +13,6 @@ const Layout = () => {
                 <Blog />
             </div>
         </>
-        
     )
 }
 

@@ -51,14 +51,6 @@ header {
   width: 100%;
 }
 
-/* .right-side-nav {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  top: 0;
-  left: 0;
-} */
-
 .dark-mode header {
   background-color: #111827;
 }
