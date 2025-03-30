@@ -53,8 +53,7 @@ function Splash() {
   return (
     <div className="flex justify-center items-center mt-72">
       <HyperText>
-        {data.random_verse.book} {data.random_verse.chapter}:
-        {data.random_verse.verse}
+        {`${data.random_verse.book} ${data.random_verse.chapter}:${data.random_verse.verse}`}
       </HyperText>
     </div>
   );

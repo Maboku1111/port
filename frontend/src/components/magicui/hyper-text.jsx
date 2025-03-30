@@ -1,13 +1,11 @@
-"use client";
+"use client";;
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
-const DEFAULT_CHARACTER_SET = Object.freeze(
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
-);
+const DEFAULT_CHARACTER_SET = Object.freeze("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
 
-const getRandomInt = (max) => Math.floor(Math.random() * max);
+const getRandomInt = max => Math.floor(Math.random() * max);
 
 export function HyperText({
   children,
@@ -24,7 +22,8 @@ export function HyperText({
     forwardMotionProps: true,
   });
 
-  const [displayText, setDisplayText] = useState(() => children.split(""));
+  const [displayText, setDisplayText] = useState(() =>
+    children.split(""));
   const [isAnimating, setIsAnimating] = useState(false);
   const iterationCount = useRef(0);
   const elementRef = useRef(null);
@@ -45,17 +44,14 @@ export function HyperText({
       return () => clearTimeout(startTimeout);
     }
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            setIsAnimating(true);
-          }, delay);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1, rootMargin: "-30% 0px -30% 0px" }
-    );
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          setIsAnimating(true);
+        }, delay);
+        observer.disconnect();
+      }
+    }, { threshold: 0.1, rootMargin: "-30% 0px -30% 0px" });
 
     if (elementRef.current) {
       observer.observe(elementRef.current);
@@ -78,10 +74,8 @@ export function HyperText({
             letter === " "
               ? letter
               : index <= iterationCount.current
-              ? children[index]
-              : characterSet[getRandomInt(characterSet.length)]
-          )
-        );
+                ? children[index]
+                : characterSet[getRandomInt(characterSet.length)]));
         iterationCount.current = iterationCount.current + 0.1;
       } else {
         setIsAnimating(false);
@@ -97,14 +91,10 @@ export function HyperText({
       ref={elementRef}
       className={cn("overflow-hidden py-2 text-4xl font-bold", className)}
       onMouseEnter={handleAnimationTrigger}
-      {...props}
-    >
+      {...props}>
       <AnimatePresence>
         {displayText.map((letter, index) => (
-          <motion.span
-            key={index}
-            className={cn("font-mono", letter === " " ? "w-3" : "")}
-          >
+          <motion.span key={index} className={cn("font-mono", letter === " " ? "w-3" : "")}>
             {letter.toUpperCase()}
           </motion.span>
         ))}
