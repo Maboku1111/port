@@ -5,6 +5,32 @@
   src: url("./assets/fonts/Pixer-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: myFont1;
+  src: url("./assets/fonts/SpriteGraffiti-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: myFont2;
+  src: url("./assets/fonts/SpriteGraffiti-Shadow.ttf") format("truetype");
+}
+
 .navbar {
   font-family: myFont;
+}
+
+.bio {
+  font-family: myFont1;
+}
+
+.inner-text {
+  font-family: myFont2;
+}
+
+.icon {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
