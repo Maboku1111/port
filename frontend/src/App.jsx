@@ -34,10 +34,10 @@ export function App() {
         </div>
       ) : (
         <>
-          <div className="fixed top-0 right-0 flex justify-between items-center content-center justify-items-center w-full">
+          <div>
             <Header />
           </div>
-          <div className="w-11/12 max-w-screen-md mx-auto p-5 box-border">
+          <div className="w-11/12 max-w-screen-lg mx-auto p-5 box-border mt-16">
             <Home />
           </div>
         </>

@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: myFont;
+  src: url("./assets/fonts/Pixer-Regular.ttf") format("truetype");
+}
+
+.navbar {
+  font-family: myFont;
+}
