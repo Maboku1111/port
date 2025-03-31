@@ -6,16 +6,18 @@ import {
 } from "@tanstack/react-query";
 import { useState, useEffect } from "react";
 import { HyperText } from "./components/magicui/hyper-text";
+import Header from "./components/Header";
+import Home from "./pages/Home";
 
 const queryClient = new QueryClient();
 
-function App() {
+export function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
-    }, 8000);
+    }, 6000);
 
     return () => {
       clearTimeout(timeout);
@@ -31,13 +33,20 @@ function App() {
           </QueryClientProvider>
         </div>
       ) : (
-        <h1>Enter my portfolio</h1>
+        <>
+          <div className="fixed top-0 right-0 flex justify-between items-center content-center justify-items-center w-full">
+            <Header />
+          </div>
+          <div className="w-11/12 max-w-screen-md mx-auto p-5 box-border">
+            <Home />
+          </div>
+        </>
       )}
     </>
   );
 }
 
-function Splash() {
+export function Splash() {
   const { isPending, error, data } = useQuery({
     queryKey: ["verse"],
     queryFn: async function fetchRandomBibleVerseFromBibleApi() {
@@ -58,5 +67,3 @@ function Splash() {
     </div>
   );
 }
-
-export default App;
