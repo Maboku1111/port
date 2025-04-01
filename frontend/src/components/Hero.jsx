@@ -1,4 +1,5 @@
 import { TypingAnimation } from "@/components/magicui/typing-animation";
+import ScrollBasedVelocityDemo from "./Scroll";
 
 function Hero() {
   return (
@@ -69,6 +70,8 @@ function Hero() {
             .
           </p>
         </div>
+
+        <ScrollBasedVelocityDemo />
       </div>
     </section>
   );
