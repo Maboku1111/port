@@ -29,7 +29,7 @@ export function App() {
       {loading ? (
         <div>
           <QueryClientProvider client={queryClient}>
-            <Splash />
+            <Splash className="navbar"/>
           </QueryClientProvider>
         </div>
       ) : (
@@ -60,8 +60,8 @@ export function Splash() {
   if (error) return "An error has occured " + error.message;
 
   return (
-    <div className="flex justify-center items-center mt-72">
-      <HyperText>
+    <div>
+      <HyperText className="flex justify-center items-center mt-96 navbar">
         {`${data.random_verse.book} ${data.random_verse.chapter}:${data.random_verse.verse}`}
       </HyperText>
     </div>

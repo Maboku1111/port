@@ -3,7 +3,7 @@ import Blog from "../../src/components/Blog";
 
 function Home() {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="mt-28">
       <Hero/>
       <Blog />
     </div>
