@@ -4,7 +4,8 @@ import Blog from "../../src/components/Blog";
 function Home() {
   return (
     <div className="mt-28">
-      <Hero/>
+      <Hero />
+      
       <Blog />
     </div>
   );
